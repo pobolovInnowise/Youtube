@@ -1,0 +1,54 @@
+
+.video {
+    display: flex;
+    flex-direction: column;
+}
+
+.video_image_container {
+    position: relative;
+    display: inline-block;
+}
+
+.video_controls {
+    position: absolute;
+    bottom: 33px;
+}
+
+.separator {
+    width: 1363px;
+    height: 1px;
+    background-color: #D8D8D8;
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+.mobile_video {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    .mobile_video {
+        display: block;
+    }
+
+    .video {
+        display: none;
+    }
+
+    .mobile_video_image_container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .mobile_video_controls {
+        position: absolute;
+        bottom: 8px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,785 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+/* mulish-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/mulish-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* mulish-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/mulish-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* mulish-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/mulish-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 255px 1665px;
+    grid-template-rows: 94px 280px 130px 352px 341px;
+    grid-template-areas:
+        'header header'
+        'sidebar channel-picture'
+        'sidebar channel-header'
+        'sidebar video-section'
+        'sidebar other-videos';
+}
+
+.header {
+    grid-area: header;
+    margin-left: 32px;
+    margin-top: -10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.channel-picture {
+    grid-area: channel-picture;
+
+}
+
+.channel-header {
+    grid-area: channel-header;
+}
+
+.video-section {
+    grid-area: video-section;
+
+}
+
+.other-videos {
+    grid-area: other-videos;
+    margin-top: 50px;
+}
+
+header {
+    display: flex;
+    gap: 505px;
+    /*margin-top: 20px;*/
+    flex-shrink: 0;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.menu-icon {
+    height: 17px;
+    width: 20px;
+}
+
+.ytLogo-icon {
+    height: 25px;
+    width: 37px;
+    margin-left: 28px;
+    margin-right: 4px;
+}
+
+.youtube-icon {
+    height: 23px;
+    width: 75px;
+}
+
+.input {
+    height: 44px;
+    width: 830px;
+    border-radius: 22px;
+    margin-left: 59px;
+    border: none;
+
+    padding-left: 23px;
+    padding-right: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background: rgba(235, 235, 235, 0.3) url("../icons/search.svg") no-repeat right center;
+    background-position: calc(100% - 18px) center;
+    background-size: 16px 16px;
+}
+
+
+
+
+input::placeholder {
+    color: #30384C;
+    font-size: 16px;
+    opacity: 0.4;
+}
+
+.camera-icon {
+    height: 20px;
+    width: 27px;
+    margin-right: 50px;
+}
+
+.dots-menu-icon {
+    height: 21px;
+    width: 21px;
+    margin-right: 50px;
+}
+
+.bell-wrapper {
+    position: relative;
+}
+
+.bell-icon {
+    height: 26px;
+    width: 22px;
+    margin-right: 50px;
+}
+
+.bell-number {
+    position: absolute;
+    top: -6px;
+    right: 47px;
+    height: 18px;
+    width: 18px;
+    border-radius: 100px;
+    background-color: red;
+    border: 1px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.userpic {
+    height: 40px;
+    width: 40px;
+    margin-right: 70px;
+}
+
+
+/*sidebar start*/
+.navbar {
+    height: 540px;
+    width: 159px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-left: 31px;
+    margin-top: 20px;
+    margin-bottom: 58px;
+}
+
+.navbar-item {
+    display: flex;
+    color: #898989;
+    font-size: 16px;
+    gap: 13px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.navbar-top .navbar-item:first-child {
+    color: #FF0000;
+}
+
+.subscriptions {
+    height: 324px;
+    width: 159px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    gap:23px;
+}
+
+.subscriptions-item {
+    display: flex;
+    color: #898989;
+    font-size: 16px;
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.subscription-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #C2C2C2;
+    margin-top: 80px;
+    margin-left: 4px;
+}
+
+.setting-item img {
+    width: 18px ;
+    height:20px ;
+}
+
+/*sidebar end*/
+
+
+/*Recommended start*/
+.recommended-section {
+    margin-top: -12px;
+}
+
+.recommended-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.recommended-section-header-left {
+    margin-right: 1156px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: #19202C;
+    margin-top: 5px;
+
+}
+
+.recommended-arrows {
+    display: flex;
+    gap: 10px;
+    height: 28px;
+    width: 28px;
+    flex-shrink: 0;
+    margin-left: -3px;
+    margin-bottom: -5px;
+
+}
+
+.recommended-items {
+    display: flex;
+    margin-top: 10px;
+}
+
+.recommended-item {
+    height: 150px;
+    width: 250px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.recommended-item-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.recommended-item-details {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #C2C2C2;
+    margin-bottom: 100px;
+}
+
+.recommended-item-picture {
+    position: relative;
+}
+
+.choosingBestAudio {
+    position: relative;
+}
+
+.recommended-item-duration, .choosingBestAudio-duration {
+    height: 24px;
+    width: 47px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/*Recommended end*/
+
+
+.channel-bottom-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 1099px;
+    margin-top: 30px;
+}
+
+.channel-bottom-header-name {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.channel-bottom-header-name-text {
+    display: flex;
+    gap: 7px;
+    font-weight: bold;
+    font-size: 26px;
+    flex-direction: column;
+    color: #19202C;
+}
+
+.channel-profile-picture {
+    height: 80px;
+}
+
+.channel-bottom-header-name-info {
+    font-size: 13px;
+    font-weight: lighter;
+    color: #C2C2C2;
+}
+
+.subscribe-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: -40px;
+}
+
+.subscribe {
+    border-radius: 20px;
+    background-color: #FF0000;
+    color: #FFF;
+    width: 154px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+/*video-section*/
+.video-section-header {
+    display: flex;
+    align-items: center;
+    gap: 68px;
+    font-size: 18px;
+    margin-left: -5px;
+}
+
+.video-section-header div:first-child {
+    position: relative;
+    color: red;
+    padding-bottom: 5px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.video-section-header div:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.video-section-header-recommended {
+    font-size: 16px;
+    color: #C2C2C2;
+    margin-left: 431px;
+    margin-top: 4px;
+
+}
+
+.video-section-main {
+    display: flex;
+    margin-top: 58px;
+}
+
+.video-section-main-video {
+    display: flex;
+}
+
+.video-section-main-video-title {
+    font-size: 26px;
+    font-weight: bold;
+    width: 431px;
+    margin-left: 32px;
+    margin-top: 17px;
+    line-height: 34px;
+}
+
+.video-section-main-video-description {
+    width: 548px;
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.6;
+    margin-left: 32px;
+    line-height: 22px;
+}
+
+.video-section-main-video-stats {
+    color: #C2C2C2;
+    font-size: 16px;
+    margin-top: 34px;
+    margin-left: 32px;
+}
+
+.recommended-item-details-statistics {
+    color: #C2C2C2;
+    font-size: 13px;
+    /*margin-top: 30px;*/
+    /*margin-left: 32px;*/
+}
+
+.recommended-item-details-channel {
+    font-size: 13px;
+    color: #C2C2C2;
+}
+
+.video-section-channels {
+    display: flex;
+    flex-direction: column;
+    margin-top: -28px;
+    margin-left: 204px;
+    gap: 30px;
+}
+
+.video-section-channels-name {
+    display: flex;
+    font-weight: bold;
+    font-size: 18px;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile {
+    display: none;
+    margin-top: -5px;
+}
+
+.footer {
+    display: none;
+}
+
+
+/*}*/
+
+@media (max-width: 1000px) {
+    .content {
+        display: none;
+    }
+
+    .mobile {
+        display: grid;
+        grid-template-columns: 320px;
+        grid-template-rows: 60px 260px 24px auto; /* убран футер */
+        grid-template-areas:
+        'mobile-header'
+        'author'
+        'channel-nav'
+        'videos';
+        position: relative; /* чтобы absolute внутри работал */
+    }
+
+    .header {
+        grid-area: mobile-header;
+    }
+
+    .author {
+        grid-area: author;
+    }
+
+    .channel-nav {
+        grid-area: channel-nav;
+    }
+
+    .videos {
+        grid-area: videos;
+        z-index: 1;
+    }
+
+    .footer {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 200; /* поверх videos */
+        display: flex;
+        gap: 36px;
+        background-color: white;
+        align-items: center;
+        height: 61px; /* фиксированная высота */
+        bottom: -305px;
+    }
+
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .footer-item:first-child {
+        margin-left: 24px;
+    }
+
+    .footer-home-text {
+        margin-top: 7px;
+        color: #898989;
+    }
+
+    .footer-subscriptions-text {
+        margin-top: 8px;
+        color: #898989;
+    }
+
+    .footer-library-text {
+        margin-top: 10px;
+        color: #898989;
+    }
+
+    .footer-trending-text {
+        color: #898989;
+        margin-top: 5px;
+    }
+
+    /*header*/
+    .mobile-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-header-logo {
+        margin-left: 16px;
+    }
+
+    .mobile-header-name {
+        margin-left: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .mobile-header-search {
+        margin-left: 41px;
+    }
+
+    .mobile-header-threeDots {
+        margin-left: 46px;
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .author-background {
+        height: 100px;
+        width: 320px;
+    }
+
+    .author-info {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        margin-left: 16px;
+    }
+
+    .author-info-pic {
+        height: 70px;
+        width: 70px;
+    }
+
+    .author-info-name {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 4px;
+    }
+
+    .author-info-text {
+        color: #C2C2C2;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .author-info-subscribe-button {
+        height: 34px;
+        width: 120px;
+        background-color: #FF0000;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        font-size: 12px;
+        margin-top: 22px;
+    }
+
+    .channel-nav {
+        display: flex;
+        gap: 40px;
+        font-size: 14px;
+        margin-left: 16px;
+        align-items: center;
+    }
+
+    .channel-nav-home {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        position: relative;
+        align-items: baseline;
+    }
+
+    .channel-nav-home-text {
+        display: flex;
+        justify-content: center;
+        color: #FF0000;
+    }
+
+    .channel-nav-home::after {
+        content: "";
+        position: absolute;
+        bottom: -7px;
+        height: 2px;
+        width: 50px;
+        background-color: red;
+        border-radius: 3px;
+    }
+
+    .videos {
+        display: flex;
+        flex-direction: column;
+        margin-top: 23px;
+        margin-left: 16px;
+        margin-right: 16px;
+        gap: 34px;
+    }
+
+    .channel-top-item {
+        height: 194px;
+        width: 288px;
+    }
+
+    .channel-top-item-picture {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .channel-top-item-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 14px;
+    }
+
+    .channel-top-item-name {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .channel-top-item-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: #C2C2C2;
+    }
+
+    .channel-top-item-duration {
+        height: 24px;
+        width: 47px;
+        border-radius: 12px;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+}
+
+
+

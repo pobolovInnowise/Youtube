@@ -1,0 +1,131 @@
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 1297px;
+    margin-left: 33px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: white;
+
+}
+
+.progress {
+    position: relative;
+}
+
+.progressGray {
+    position: absolute;
+}
+
+.control_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top:21px;
+}
+
+.control_buttons_left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 10px;
+}
+
+.volume {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.volumeBar {
+    display: flex;
+}
+
+.volumeGray {
+    position: absolute;
+}
+
+
+.control_buttons_right {
+     display: flex;
+     align-items: center;
+     gap: 26px;
+     margin-right: 10px;
+ }
+
+.mobile_controls {
+    display: none;
+}
+
+
+@media(max-width: 1000px) {
+    .controls {
+        display: none;
+    }
+
+    .mobile_controls {
+        display: block;
+    }
+
+    .mobile_background {
+        width: 308px;
+        position: relative;
+        margin-left: 6px;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile_controls_icons {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .mobile_pause {
+        width: 12px;
+        height: 12px;
+        margin-left: 18px;
+    }
+
+    .mobile_progress {
+        position: relative;
+        margin-left: 6px;
+    }
+
+    .mobile_progress_gray {
+        position: absolute;
+        width: 156px;
+        bottom: -3px;
+    }
+
+    .mobile_progress_red {
+        position: absolute;
+        width: 59px;
+        bottom: -3px;
+    }
+
+    .mobile_time_left {
+        font-size: 10px;
+        color: white;
+        margin-left: 14px;
+    }
+
+    .mobile_time_right {
+        font-size: 10px;
+        color: white;
+        margin-left: 162px;
+    }
+
+    .mobile_volume {
+        width: 12px;
+        height: 12px;
+        margin-left: 14px;
+    }
+
+}

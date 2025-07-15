@@ -1,0 +1,111 @@
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    grid-area: sidebar;
+    margin-left: 40px;
+    margin-top: 4px;
+}
+
+
+.sidebar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 367px;
+}
+
+.sidebar_header_right {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    gap: 11px;
+    font-size: 16px;
+    color: #19202C;
+    letter-spacing: 1px;
+}
+
+.sidebar_header_left {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.switch {
+    width: 44px;
+    height: 28px;
+    background-color: rgba(235,235,235,0.3);
+    border-radius: 14px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.slider {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    right: 2px;
+    top: 2px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    box-shadow:0px 1px rgba(0,0,0,0.2) ;
+}
+
+.mobile_sidebar {
+    display: none;
+}
+
+@media(max-width: 1000px) {
+    .sidebar {
+        display: none;
+    }
+
+    .mobile_sidebar {
+        display: block;
+    }
+
+    .mobile_sidebar_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 288px;
+        margin-left:16px ;
+        margin-top: 20px;
+        margin-bottom: 13px;
+    }
+
+    .mobile_sidebar_header_left {
+        font-size: 20px;
+        font-weight: bold;
+        color: #19202C;
+    }
+
+    .mobile_sidebar_header_right {
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+    }
+
+    .mobile_switch {
+        width: 30px;
+        height: 19px;
+        background-color: rgba(235,235,235,0.3);
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .mobile_slider {
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        right: 2px;
+        top: 2px;
+        background-color: #2196F3;
+        border-radius: 50%;
+        box-shadow:0px 1px rgba(0,0,0,0.2) ;
+    }
+}

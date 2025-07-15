@@ -1,0 +1,112 @@
+.channel_description {
+    display: flex;
+    margin-top: 38px;
+    justify-content: space-between;
+}
+
+.channel_description_left {
+    display: flex;
+    gap: 12px;
+}
+
+.channel_description_pic {
+    height: 80px;
+    width: 80px;
+}
+
+.channel_description_text {
+    display: flex;
+    flex-direction: column;
+    width: 820px;
+}
+
+.channel_description_text_name {
+    color: #19202C;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.channel_description_text_published {
+    font-size: 13px;
+    color: #C2C2C2;
+    margin-bottom: 14px;
+}
+
+.channel_description_text_water {
+    font-size: 16px;
+    line-height: 22px;
+    color: black;
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+.channel_description_text_show_more {
+    font-size: 20px;
+    color: #C2C2C2;
+}
+
+.channel_description_subscribe_button{
+    background-color: red;
+    height: 40px;
+    width: 154px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.mobile_channel_description {
+    display: none;
+}
+
+@media(max-width: 1000px) {
+    .channel_description {
+        display: none;
+    }
+
+    .mobile_channel_description {
+        display: block;
+    }
+
+    .mobile_channel_description_elements {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #D8D8D8;
+        border-bottom: 1px solid #D8D8D8;
+        width: 288px;
+        height: 92px;
+        margin-left: 16px;
+        margin-top: 30px;
+    }
+
+    .mobile_channel_description_pic {
+        height: 50px;
+        width: 50px;
+    }
+
+    .mobile_channel_description_text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        gap: 4px;
+    }
+
+    .mobile_channel_description_text_name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #19202C;
+    }
+
+    .mobile_channel_description_text_published {
+        font-size: 12px;
+        color: #C2C2C2;
+    }
+
+    .mobile_channel_description_subscribe_button {
+        color: red;
+        font-size: 16px;
+        margin-left: 52px;
+    }
+}
