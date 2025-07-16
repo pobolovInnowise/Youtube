@@ -1,5 +1,5 @@
 .video_title {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .video_title_name {
@@ -55,6 +55,7 @@
     .mobile_video_title {
         display: block;
         margin-left: 16px;
+        margin-top: 5px;
     }
 
     .video_title {

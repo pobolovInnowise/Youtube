@@ -14,7 +14,7 @@ const Sidebar = () => {
     let nextVideos = [{
         image: babyMonitor,
         title: 'Baby Monitor Technology',
-        duration: 1000,  // seconds
+        duration: 480,  // seconds
         views: 123000,
         author: 'Dollie Blair',
     },
@@ -22,7 +22,7 @@ const Sidebar = () => {
             image: aGoodAuto,
             title: 'A Good Autoresponder',
             duration: 480,
-            views: 330256,
+            views:  123000,
             author: 'Dollie Blair',
         },
         {
@@ -43,14 +43,14 @@ const Sidebar = () => {
     let mobileNextVideos = [{
         image: babyMonitor,
         title: 'Baby Monitor Technology',
-        duration: 1000,  // seconds
+        duration: 456,  // seconds
         views: 123000,
         author: 'Dollie Blair',
     },
         {
             image: aGoodAuto,
             title: 'Advertising Outdoors',
-            duration: 480,
+            duration: 139,
             views: 330256,
             author: 'Dollie Blair',
         },];

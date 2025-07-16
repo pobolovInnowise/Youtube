@@ -587,7 +587,7 @@ input::placeholder {
 
 
     .channel-top {
-        margin-top: 23px;
+        margin-top: -3px;
         margin-left: 16px;
         margin-right: 16px;
     }
@@ -596,7 +596,7 @@ input::placeholder {
         display: flex;
         flex-direction: column;
         margin-top: 23px;
-        gap: 30px;
+        gap: 31px;
     }
 
     .channel-top-item {
@@ -623,12 +623,15 @@ input::placeholder {
 
     .channel-top-item-details {
         font-size: 13px;
+        /*margin-top: -2px;*/
     }
 
-    .separator {
-        display: flex;
-        margin-bottom: 13px;
-    }
+    /*.separator {*/
+    /*    display: flex;*/
+    /*    margin-bottom: 13px;*/
+    /*    */
+
+    /*}*/
 
     /*navbar*/
     .navbar {
@@ -640,51 +643,58 @@ input::placeholder {
         display: flex;
         gap: 36px;
         margin-bottom: 11px;
+        margin-top: 29px;
     }
 
     .navbar-mobile-item {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .navbar-mobile-item-home {
+        margin-top: 2px;
+        margin-left: 0px;
         font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        color: #FF0000;
     }
 
     .navbar-mobile-item-trending {
+        color: #898989;
+        margin-top: 1px;
+        margin-left: 11px;
+        font-size: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 10px;
-        margin-left: 10px;
+        gap: 6px;
     }
 
     .navbar-mobile-item-subscriptions {
+        color: #898989;
+        margin-top: 3px;
+        margin-left: -6px;
+        font-size: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 6px;
+    }
+
+    .navbar-mobile-item-library {
+        color: #898989;
+        margin-top: 4px;
+        margin-left: -2px;
         font-size: 10px;
-        margin-left: -3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
     }
-
-    .navbar-home-text {
-        margin-top: 7px;
-        color: red;
-    }
-
-    .navbar-subscriptions-text {
-        margin-top: 8px;
-        color: #898989;
-    }
-
-    .navbar-library-text {
-        margin-top: 10px;
-        color: #898989;
-    }
-
-    .navbar-trending-text {
-        color: #898989;
-        margin-top: 5px;
-    }
-
 }
 
 
